@@ -1,0 +1,125 @@
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 0; 
+}
+
+.cb-slideshow:after { 
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left; 
+}
+
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+.cb-slideshow li div { 
+    z-index: 1000;
+    position: absolute;
+    top: 125px;
+    left: 255px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    color: #fff;
+    animation: titleAnimation 36s linear infinite 0s; 
+    border: 9px solid gray;
+    background-color: white;
+    width: 725px;
+    height: 300px;
+}
+
+h4 {
+	color: #ff4411; 
+	font-size: 48px; 
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	font-weight: 200
+	vertical-align: top;
+}
+
+img {
+	width:654px;
+	height:108px;
+}
+
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(http://www.americangraniteonline.com/wp-content/uploads/marble-stone.jpg) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(https://s-media-cache-ak0.pinimg.com/736x/68/5d/e2/685de288ba0bf764f48860739e2d847e.jpg);
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/03/21134600/Blue-and-Purple-Watercolor-Floral-Pattern.jpg);
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(https://s-media-cache-ak0.pinimg.com/736x/e0/d6/66/e0d666b2dbb082d571e4391d6fca3b54.jpg);
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/nottingham-panorama-city-watercolor-justyna-jbjart.jpg);
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(https://s-media-cache-ak0.pinimg.com/736x/23/78/e1/2378e1d5e944f5327deab5c096dd194f.jpg);
+    animation-delay: 30s; 
+}
+
+.cb-slideshow li:nth-child(2) div { 
+    animation-delay: 6s; 
+}
+.cb-slideshow li:nth-child(3) div { 
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(4) div { 
+    animation-delay: 18s; 
+}
+.cb-slideshow li:nth-child(5) div { 
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(6) div { 
+    animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+    0% { opacity: 1 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 1 }
+    100% { opacity: 1 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1140px) { 
+    .cb-slideshow li div h3 { font-size: 140px }
+}
+@media screen and (max-width: 600px) { 
+    .cb-slideshow li div h3 { font-size: 80px }
+}
